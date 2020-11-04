@@ -34,12 +34,19 @@
     <header class="jumbotron">
         <div class = "container">
             <div class = "row row-header">
-                <div class = "col-12 col-sm-8">
+                <div class = "col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
+                <div class="col-12 col-sm-3">
+                    <div class="col-12 col-sm align-self-center">
+                        <img src="img/logo.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <div class="col-12 col-sm align-self-center">
+                        <a class="btn btn-warning btn-lg btn-block btn-sm" href="#reservation" role="button">Reserve Table</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,13 +73,18 @@
         </div>
 
 
-        <div class = "row row-content align-items-center"> 
-            <div class = "col-sm-4 col-md-3">
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class="col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            <div class="col col-sm col-md">
+                <div class="media">
+                    <img class="d-flex ml-3 img-thumbnail align-self-center order-last" src="img/buffet.png" alt="buffet">
+                    <div class="media-body">
+                        <h2 class=mt-0>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -94,6 +106,64 @@
                         </p>
                     </div>
                 </div>            
+            </div>
+        </div>
+        <div class="row row-content justify-content-center">
+            <div class="col-12 col-sm-8">
+                <div class="card">
+                    <h3 class="card-header bg-warning text-white">Reserve</h3>
+                    <div class="card-body">
+                        <form id = "reservation" class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="numberOfGuests" class="col-xs-12 col-sm-2 control-label">Number of Guests</label>
+                                <div class="col-sm-10">
+                                    <label class="radio-inline">
+                                      <input type="radio" name="numberOfGuests">1 </input>
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="numberOfGuests">2</input>
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="numberOfGuests">3</input>
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="numberOfGuests">4</input>
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="numberOfGuests">5</input>
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="numberOfGuests">6
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="date" class="col-xs-12 col-sm-2 control-label">Date and Time</label>
+                                <div class="col-xs-6 col-sm-4">
+                                    <div class="input-group date" id="reservationDate">
+                                        <input type="text" class="form-control" placeholder="Date"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-offset-1 col-sm-4">
+                                    <div class="input-group date" id="reservationTime">
+                                        <input type="text" class="form-control" placeholder="Time"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-time"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
