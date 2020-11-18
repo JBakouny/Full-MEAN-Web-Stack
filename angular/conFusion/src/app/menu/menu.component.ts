@@ -45,7 +45,6 @@ const DISHES: Dish[] = [
   }
  ];
 
-
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
