@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import 'named_variables';
 @import '../node_modules/font-awesome/scss/font-awesome';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 $lt-gray: #ddd;
 $background-dark: #512DA8;
@@ -14,6 +16,16 @@ $accent-color:         #FFC107;
 $primary-text-color:   #212121;
 $secondary-text-color: #757575;
 $divider-color:        #BDBDBD;
+
+// some basic resets 
+
+body { 
+  padding: 0; 
+  margin: 0; 
+  font-family: Roboto, sans-serif; 
+  
+}
+
 
 @mixin zero-margin($pad-up-down, $pad-left-right) {
     margin: 0px auto;
