@@ -19,6 +19,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
@@ -33,6 +34,7 @@ import { FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from './shared/baseurl';
+
 
 
 @NgModule({
@@ -72,6 +74,7 @@ import { baseURL } from './shared/baseurl';
     DishService,
     PromotionService,
     LeaderService,
+    ProcessHTTPMsgService,
     {provide: 'BaseURL', useValue: baseURL}
   ],  
   entryComponents: [
