@@ -65,9 +65,9 @@ export class DishdetailComponent implements OnInit {
     this.route.params.pipe(switchMap((params: Params) => { this.visibility = 'hidden'; return this.dishservice.getDish(params['id']); }))
     .subscribe(dish => {
       this.dish = dish;
-      this.setPrevNext(dish._id);
+      this.setPrevNext(dish.id);
       this.visibility = 'shown';
-      this.favoriteService.isFavorite(this.dish._id)
+      this.favoriteService.isFavorite(this.dish.id)
       .subscribe(resp => { console.log(resp); this.favorite = <boolean>resp.exists; },
           err => console.log(err));
     },
@@ -97,7 +97,7 @@ export class DishdetailComponent implements OnInit {
   }
 
   onSubmit() {
-    this.dishservice.postComment(this.dish._id, this.commentForm.value)
+    this.dishservice.postComment(this.dish.id, this.commentForm.value)
       .subscribe(dish => this.dish = <Dish>dish);
     this.commentFormDirective.resetForm();
     this.commentForm.reset({
@@ -128,7 +128,7 @@ export class DishdetailComponent implements OnInit {
 
   addToFavorites() {
     if (!this.favorite) {
-      this.favoriteService.postFavorite(this.dish._id)
+      this.favoriteService.postFavorite(this.dish.id)
         .subscribe(favorites => { console.log(favorites); this.favorite = true; });
     }
   }
