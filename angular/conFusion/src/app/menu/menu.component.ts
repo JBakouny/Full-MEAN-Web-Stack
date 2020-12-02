@@ -23,7 +23,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.dishService.getDishes()
-    .then(dishes => this.dishes = dishes);
+     
   }
 
 }
